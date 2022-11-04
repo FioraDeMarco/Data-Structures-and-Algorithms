@@ -24,7 +24,6 @@ var isPalindrome = function (s) {
   let left = 0;
   let right = string.length - 1;
   let alpha = "abcdefghijklmnopqrstuvwxyz0123456789";
-  let alphaNum = [];
   while (left < right) {
     if (
       alpha.includes(string[left]) &&
