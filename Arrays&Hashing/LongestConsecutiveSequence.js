@@ -18,16 +18,17 @@ let nums = [100, 4, 200, 1, 3, 2];
 var longestConsecutive = function (nums) {
   let set = new Set(nums);
   let length = 0;
-  let result = 0;
+  let longest = 0;
   for (let num of set) {
     if (!set.has(num - 1)) {
       length = 0;
       while (set.has(num + length)) {
         length++;
       }
-      result = Math.max(length, result);
+      longest = Math.max(length, longest);
     }
   }
-  return result;
+  return longest;
 };
+// using a variable name like result is a bad sign to someone who is skilled at ds&a
 console.log(longestConsecutive(nums));
